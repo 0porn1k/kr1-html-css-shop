@@ -38,6 +38,22 @@
   * {
   box-sizing: border-box;
 }
+.breadcrumbs {
+  max-width: var(--container-width);
+  margin: 0 auto var(--space-md);
+  font-size: 14px;
+  color: var(--color-muted);
+}
+
+.breadcrumbs a {
+  color: var(--color-primary);
+}
+
+.breadcrumbs span::before {
+  content: " / ";
+  color: var(--color-muted);
+}
+
 
 /*
   Убираем стандартный внешний отступ браузера у body.
@@ -327,4 +343,13 @@ footer {
 
 [aria-invalid="true"] {
   border-color: var(--color-danger);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+:target {
+  outline: 2px dashed var(--color-primary);
+  outline-offset: 4px;
 }
